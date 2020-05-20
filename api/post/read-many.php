@@ -3,8 +3,8 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once '../../config/Database.php';
-include_once '../../models/Post.php';
+include_once 'config/Database.php';
+include_once 'models/Post.php';
 
 
 //Instantiate DB & connect
@@ -32,7 +32,10 @@ if ($num > 0) {
             'id' => $id,
             'title' => $title,
             'body' => html_entity_decode($body),
-            'name' => $name
+            'name' => $name,
+            'user_id' => $user_id,
+            'creation_time' => $creation_time
+
         ];
 
         //Push to "data

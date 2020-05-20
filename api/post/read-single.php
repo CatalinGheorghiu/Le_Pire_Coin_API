@@ -3,8 +3,8 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-// include_once '../../config/Database.php';
-// include_once '../../models/Post.php';
+include_once 'config/Database.php';
+include_once 'models/Post.php';
 
 
 //Instantiate DB & connect
@@ -26,6 +26,8 @@ $post_arr = [
     'title' => $post->title,
     'body' => $post->body,
     'name' => $post->name,
+    'user_id' => $post->user_id,
+    'creation_time' => $post->creation_time,
 
 ];
 

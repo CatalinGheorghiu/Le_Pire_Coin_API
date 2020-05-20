@@ -10,6 +10,7 @@ class Post
     public $name;
     public $title;
     public $body;
+    public $user_id;
     public $created_at;
 
     //Constructor with DB
@@ -27,6 +28,7 @@ class Post
                         p.id,
                         p.title,
                         p.body,
+                        p.user_id,
                         p.created_at as creation_time
                     FROM
                         $this->table p
@@ -53,6 +55,7 @@ class Post
                         p.id,
                         p.title,
                         p.body,
+                        p.user_id,
                         p.created_at as creation_time
                     FROM
                         $this->table p
@@ -76,6 +79,8 @@ class Post
         $this->name = $row['name'];
         $this->title = $row['title'];
         $this->body = $row['body'];
+        $this->user_id = $row['user_id'];
+        $this->creation_time = $row['creation_time'];
 
         // return $stmt;
     }

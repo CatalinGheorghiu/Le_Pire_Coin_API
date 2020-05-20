@@ -2,9 +2,8 @@
 //Headers
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
-var_dump(realpath(__DIR__));
-// include_once '../../config/Database.php';
-// include_once '../../models/User.php';
+include_once 'config/Database.php';
+include_once 'models/User.php';
 
 //Instantiate DB
 $database = new Database();
